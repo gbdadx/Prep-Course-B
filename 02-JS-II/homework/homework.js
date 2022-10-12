@@ -1,4 +1,4 @@
-/ En los próximos 22 problemas, deberás completar la función.
+// En los próximos 22 problemas, deberás completar la función.
 // Todo tu código irá dentro de las llaves de la función.
 // Asegúrate que usas "return" cuando la consola te lo pida.
 // Pista: "console.log()" NO fucionará.
