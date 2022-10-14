@@ -21,7 +21,7 @@ En esta lección cubriremos:
 
 ## Clases
 
-Muchas veces al crear un objeto, estamos creando realmente una plantilla para objetos similares. En lugar de hacer copias de esa plantilla una y otra vez, Javascript nos da acceso a lo que llamamos un constructor o `class`, las cuales son útiles para crear muchos objetos que comparten algunas de las mismas propiedades y métodos. Las clases comparten gran parte de la misma funcionalidad que los objetos normales, pero también se expande mucho en esa funcionalidad. 
+Muchas veces al crear un objeto, estamos creando realmente una plantilla para objetos similares. En lugar de hacer copias de esa plantilla una y otra vez, Javascript nos da acceso a lo que llamamos un constructor o `class`, las cuales son útiles para crear muchos objetos que comparten algunas de las mismas propiedades y métodos. Las clases comparten gran parte de la misma funcionalidad que los objetos normales, pero también se expande mucho en esa funcionalidad.
 
 ### Class e instanciación pseudo-clásica
 
@@ -78,7 +78,7 @@ Hasta ahora siempre que teníamos que crear un objeto nuevo declarábamos un obj
 
 El método `create` de los objetos nos permite crear un nuevo objeto a partir de un prototype especificado.
 
-``` javascript
+```javascript
 // creamos un objecto con un objeto vacio como proto
 var obj = Object.create({})
 
@@ -94,7 +94,7 @@ var obj = {}
 
 El método `assign` de los objetos nos permite agregar propiedades a un objeto pasado por parámetro:
 
-``` javascript
+```javascript
 var obj = {}
 
 // No es necesario guardar el resultado porque los objetos se pasan por `referencia`
@@ -119,7 +119,7 @@ Cuando generamos un arreglo nuevo podemos acceder a métodos como `map` o `slice
 
 También podemos generar nuestros propios constructores que dé los métodos los cuales se puedan heredar. Creamos un constructor del cual pueda haber variantes.
 
-``` javascript
+```javascript
 function Persona(nombre, apellido, ciudad) {
   this.nombre = nombre;
   this.apellido = apellido;
@@ -134,9 +134,10 @@ var Emi = new Persona('Emi', 'Chequer', 'Buenos Aires');
 
 Emi.saludar(); // 'Soy Emi de Buenos Aires'
 ```
+
 Ahora todo Alumno de Henry antes que un Alumno es una Persona, por tanto podríamos decir que un Alumno hereda las propiedades de ser Persona.
 
-``` javascript
+```javascript
 > function Alumno(nombre, apellido, ciudad, curso) {
     // podríamos copiar las mismas propiedades de Persona acá adentro
     this.nombre = nombre;
@@ -145,11 +146,12 @@ Ahora todo Alumno de Henry antes que un Alumno es una Persona, por tanto podría
     this.curso = curso
   }
 ```
+
 ### Constructores Anidados
 
 Pero en este caso estaríamos repitiendo código, y si en un futuro quisiéramos cambiar alguna propiedad,tendríamos que hacerlo en ambos constructores, por tanto, descartaremos esta opción.
 
-``` javascript
+```javascript
 // queremos reutilizar las propiedades de persona,
 function Alumno(nombre, apellido, ciudad, curso) {
   // usemos nuestro constructor Persona dentro del de Alumno
@@ -178,7 +180,7 @@ El constructor del `__proto__` esta ligado a Alumno y luego al `Object Object` d
 
 Para solucionar esto, agregamos al prototipo los métodos de Persona, para esto vamos a usar el método `Object.create`.
 
-``` javascript
+```javascript
 // usamos `Object.create` porque este guardaba el argumento pasado como `__proto__` del objeto a retornar
 Alumno.prototype = Object.create(Persona.prototype)
 
@@ -201,4 +203,3 @@ Realiza los ejercicios propuestos en el archivo `homework.js` de esta misma carp
 * [Codecademy: Learn Javascript](https://www.codecademy.com/learn/learn-javascript)
 * [Udacity: Intro to Javascript](https://www.udacity.com/course/intro-to-javascript--ud803)
 * [MDN: Official Javascript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-

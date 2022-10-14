@@ -29,12 +29,11 @@ JavaScript es un lenguaje de programación que fue creado originalmente para ser
 
 Vamos a aprender los conceptos más básicos de JS:
 
-
 ## Variables
 
 Una variable es una forma de almacenar el valor de algo para usar más tarde. (Una nota para aquellos con conocimientos previos de programación: Javascript es un lenguaje de tipado dinámico, una variable se puede configurar (y restablecer) a cualquier tipo, no necesitamos declarar su tipo al iniciar la variable).
 
-Para crear una variable en JavaScript utilizamos la palabra clave `var`, seguida de un espacio y el nombre de la variable (con este nombre, llamado **identificador**, podremos hacer referencia a ella luego). Además de declarar una variable, podemos asignarle un valor usando el signo `=`. Los identificadores pueden iniciar con una letra, un guión bajo (_) o signo pesos ($), además de que puede contener también números. Los siguientes son nombres válidos de variables: `Nombre_usuario`, `Email002`, `$ahorros` y `_direccion`. También, JS distingue entre mayúsculas y minúsculas para nombrar variables, así que `Nombre` y `nombre` serían dos nombres de variables **DIFERENTES**.
+Para crear una variable en JavaScript utilizamos la palabra clave `var`, seguida de un espacio y el nombre de la variable (con este nombre, llamado **identificador**, podremos hacer referencia a ella luego). Además de declarar una variable, podemos asignarle un valor usando el signo `=`. Los identificadores pueden iniciar con una letra, un guión bajo (_) o signo pesos ($), además de que puede contener también números. Los siguientes son nombres válidos de variables: `Nombre_usuario`, `Email002`, `$ahorros `y`_direccion `. También, JS distingue entre mayúsculas y minúsculas para nombrar variables, así que `Nombre `y`nombre` serían dos nombres de variables **DIFERENTES**.
 
 > Nota: Las palabras claves o keywords son palabras especiales que utiliza el lenguaje para indicar algo. No podremos usar las palabras claves del lenguaje como nombres de variables.
 
@@ -69,8 +68,6 @@ console.log();
 ```
 
 Este método muy simple nos permitirá imprimir en la consola todo lo que pongamos entre paréntesis.
-
-
 
 ## Tipos de Datos
 
@@ -121,7 +118,7 @@ console.log(variableInexistente); // undefined
 
 ### Null
 
-`null` se usa para establecer que el elemento que están buscando existe, pero no hay ningún valor asociado a este. 
+`null` se usa para establecer que el elemento que están buscando existe, pero no hay ningún valor asociado a este.
 
 ```javascript
 var numeroTelefono = '11-1234-5678';
@@ -129,11 +126,10 @@ numeroTelefono = null;
 
 numeroTelefono; // null
 ```
-Mientras que `undefined` está configurado por Javascript,` null` está configurado por un desarrollador. Si alguna vez recibes `null`, debes saber que otro desarrollador estableció ese valor en` null`.
 
-Una última cosa a tener en cuenta, ni `undefined` ni` null` son cadenas, están escritas tal como están sin comillas, como un booleano.
+Mientras que `undefined` está configurado por Javascript,` null` está configurado por un desarrollador. Si alguna vez recibes `null`, debes saber que otro desarrollador estableció ese valor en ` null`.
 
-
+Una última cosa a tener en cuenta, ni `undefined` ni ` null` son cadenas, están escritas tal como están sin comillas, como un booleano.
 
 ## Operadores
 
@@ -162,6 +158,7 @@ Tenemos entonces los operadores matemáticos de siempre
 2 - 2 = 0
 2 / 2 = 1
 ```
+
 y un operador nuevo que será de gran ayuda: el operador módulo.
 
 ### Módulo (%)
@@ -222,7 +219,6 @@ El "NOT" (`!`) pregunta lo contrario de la expresión (volveremos a visitar el o
 
 Con eso en mente, podemos introducir el "no es igual" (`!==`). Esto devolverá verdadero si los artículos **NO** son iguales entre sí de alguna manera. Esto, como el triple igual, tiene en cuenta el tipo de dato.
 
-
 Por ejemplo:
 
 ```javascript
@@ -243,6 +239,7 @@ Por ejemplo:
 También podemos combinar dos expresiones de igualdad y preguntar si alguna de las dos es verdadera, si ambas son verdaderas o si ninguna de ellas es verdadera. Para hacer esto, utilizaremos operadores lógicos.
 
 ### &&
+
 El primer operador lógico que veremos es el operador "Y" ("AND"). Está escrito con dos símbolos (``&&``). Esto evaluará ambas expresiones y devolverá true si y solamente si **AMBAS** expresiones son true. Si una de ellas (o ambas) son false, este operador devolverá false:
 
 ```javascript
@@ -260,6 +257,7 @@ El siguiente es el operador "Ó" ("OR"). Está escrito con dos barras verticales
 (100 > 10) || (10 !== 10) // true
 (10 === 9) || (10 < 9) // false
 ```
+
 ### !
 
 El último operador lógico es el operador "NOT" ("NO"). Está escrito como un solo signo de exclamación (``!``). Vimos este operador antes al determinar la igualdad (!==). Como antes, el operador NOT devolverá el valor booleano opuesto de lo que se le pasa:
@@ -274,10 +272,7 @@ El último operador lógico es el operador "NOT" ("NO"). Está escrito como un s
 Un par de cosas a tener en cuenta sobre los operadores lógicos.
 
 - Las expresiones se evalúan en orden y la computadora omitirá cualquier expresión redundante. En una declaración &&, si la primera expresión es false, la segunda expresión no se evaluará porque AMBAS expresiones deben ser true. Lo mismo para la declaración ||. Si la primera expresión es verdadero, la segunda no se evaluará porque solo debe haber una declaración verdadero para cumplir con los requisitos del operador.
-
 - Usa paréntesis. Como vimos en el segundo ejemplo de operador !, usamos paréntesis para evaluar PRIMERO lo que estaba dentro de los paréntesis, luego aplicamos el operador !. Podemos ajustar cualquier expresión entre paréntesis y se evaluará antes de evaluar la expresión como un todo.
-
-
 
 ## Métodos
 
@@ -289,7 +284,6 @@ console.log(nombreGato.length); // 5
 ```
 
 Veremos muchos otros métodos integrados en otros tipos de datos a lo largo de este curso.
-
 
 ## Homework
 

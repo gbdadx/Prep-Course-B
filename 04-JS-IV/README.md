@@ -27,10 +27,12 @@ Hemos visto los arreglos como una estructura para almacenar información indepen
 ```javascript
 var objetoNuevo = {}
 ```
-### Pares Clave:Valor (Key:Value) de un objeto 
-Vimos que los arreglos tenían índices y elementos y que cada índice estaba asociado a un elemento en particular. En los objetos, encontramos pares clave:valor, donde la **clave** (*key*) es el identificador y el **valor** (*value*) es lo que deseamos guardar en esa clave. Su sintáxis es `clave:valor`. A las claves también se les llama `propiedad del objeto`. 
 
-Un ojeto puede contener muchos de estos pares `clave:valor`, los cuales estarán separados por coma ( ` , ` ). Cada clave en un objeto es única, pero podemos tener distintas claves con el mismo valor. Los valores pueden ser de cualquier tipo de dato: string, number, boolean, array, función e incluso otro objeto:
+### Pares Clave:Valor (Key:Value) de un objeto
+
+Vimos que los arreglos tenían índices y elementos y que cada índice estaba asociado a un elemento en particular. En los objetos, encontramos pares clave:valor, donde la **clave** (*key*) es el identificador y el **valor** (*value*) es lo que deseamos guardar en esa clave. Su sintáxis es `clave:valor`. A las claves también se les llama `propiedad del objeto`.
+
+Un ojeto puede contener muchos de estos pares `clave:valor`, los cuales estarán separados por coma ( `,` ). Cada clave en un objeto es única, pero podemos tener distintas claves con el mismo valor. Los valores pueden ser de cualquier tipo de dato: string, number, boolean, array, función e incluso otro objeto:
 
 ```javascript
 var usuario = {
@@ -40,6 +42,7 @@ var usuario = {
   online: true
 }
 ```
+
 ### Accediendo a los valores en un objeto
 
 Una vez que tengamos los pares clave-valor, podemos acceder a esos valores llamando al nombre del objeto seguido de la clave correspondiente al valor que queremos consultar. Hay dos formas diferentes de hacer esto: usando puntos o usando corchetes.
@@ -50,6 +53,7 @@ Con puntos, escribimos el nombre del objeto seguido de punto ( ` .` ) y finalmen
 usuario.nombre; // Andres
 usuario.online; // true
 ```
+
 Con corchetes, es similar a como hacemos con los arrays pero debemos usar una string, número o variable que apunte a una string o número. También podemos llamar cada clave envolviéndola entre comillas:
 
 ```javascript
@@ -59,6 +63,7 @@ usuario['nombre']; // Andres
 usuario['edad']; // 26
 usuario[password]; // hola123
 ```
+
 Por lo general, los corchetes casi siempre se usan con variables.
 
 ### Asignando valores a objeto
@@ -76,6 +81,7 @@ nuevoUsuario.username = 'Felipe';
 nuevoUsuario['contraseña'] = 'hola12345';
 nuevoUsuario[profesion] = true;
 ```
+
 ### Eliminando propiedades de un objeto
 
 Usamos la palabra clave `delete`, para eliminar una propiedad dentro de un objeto:
@@ -87,6 +93,7 @@ var otroObjeto = {
 
 delete otroObjeto.claveAEliminar;
 ```
+
 Es raro que veamos el uso de la palabra clave `delete`, muchos consideran que la mejor práctica es establecer el valor de una palabra clave en `undefined`. Dependerá de ti cuando llegue el momento.
 
 ### Métodos de un objeto
@@ -102,7 +109,8 @@ var nuevoObjeto = {
 
 nuevoObjeto.decirHola(); //Hola a todo el mundo!
 ```
-###  Bucle *`for...in`*
+
+### Bucle *`for...in`*
 
 A veces queremos iterar sobre cada par clave-valor en nuestro objeto. Con los arreglos, utilizamos un estándar para el bucle y una variable de número de índice. Los objetos no contienen índices numéricos, por lo que el bucle estándar no funcionará para los objetos. Javascript tiene un segundo tipo de bucle for integrado llamado "for ... in loop". Es una sintaxis ligeramente diferente, comienza igual pero entre paréntesis declararemos una variable, la palabra clave in y el nombre del objeto. Esto recorrerá cada clave del objeto y finalizará cuando se hayan iterado todas las claves. Podemos usar esta clave, y la notación de corchetes, en nuestro bucle for para acceder al valor asociado con esa clave.
 
@@ -146,8 +154,8 @@ var usuario = {
 
 usuario.saludar(); // 'hola, Andres'
 ```
-Nota: la palabra clave `this` a veces puede ser uno de los temas más difíciles en Javascript. Lo estamos usando muy básicamente aquí, pero el tema se vuelve mucho más complejo muy pronto.
 
+Nota: la palabra clave `this` a veces puede ser uno de los temas más difíciles en Javascript. Lo estamos usando muy básicamente aquí, pero el tema se vuelve mucho más complejo muy pronto.
 
 ## Homework
 
@@ -161,4 +169,3 @@ Realiza los ejercicios propuestos en el archivo `homework.js` de esta misma carp
 * [Codecademy: Learn Javascript](https://www.codecademy.com/learn/learn-javascript)
 * [Udacity: Intro to Javascript](https://www.udacity.com/course/intro-to-javascript--ud803)
 * [MDN: Official Javascript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-

@@ -44,6 +44,7 @@ crearSaludo("Dan", decirAdiosAlUsuario); // 'Goodbye Dan!'
 En el ejemplo anterior, hemos definido tres funciones: `decirHolaAlUsuario`, `decirAdiosAlUsuario` y `crearSaludo`. Las dos primeras reciben un usuario como parámetro, mientras que la tercera, recibe usuario y cb, indicando que se trata de una función de callback. Al ejecutar la función `crearSaludo`, esta recibe como argumento de callback la función `decirHolaAlUsuario` la cual se ejecuta con el argumento ``"Dan"``, retornando así el saludo 'Hello Dan!', esto es, usamos una función como argumento de otra para que se ejecute dentro de la primera. De forma análoga para la función `decirAdiosAlUsuario`.
 
 Nota: Observemos que la función que es pasada como argumento **NO** va ejecutada: solo se hace el llamado de esta sin ejecutarse y luego se realiza su ejecución dentro de la primera función.
+
 ## Homework
 
 Realiza los ejercicios propuestos en el archivo `homework.js` de esta misma carpeta, el cual tiene test. Si no recuerdas cómo debes correr el test, revisa el archivo `README` que se encuentra al final del repositorio.
@@ -54,4 +55,3 @@ Realiza los ejercicios propuestos en el archivo `homework.js` de esta misma carp
 * [Codecademy: Learn Javascript](https://www.codecademy.com/learn/learn-javascript)
 * [Udacity: Intro to Javascript](https://www.udacity.com/course/intro-to-javascript--ud803)
 * [MDN: Official Javascript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-
