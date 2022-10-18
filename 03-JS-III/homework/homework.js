@@ -9,7 +9,7 @@ function imprimirSumaNumeros() {
     // Pista: usa un acumulador
     // Tu código:
     let acum=0;
-    for(let i=1; i<=10;i++){
+    for(let i=1; i<=10;i++ ){
       acum+=i;
     }
     console.log(acum);
